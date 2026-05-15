@@ -366,6 +366,54 @@ section
     & .loader
       display block
 
+// explode
+.calculator__main-vfx
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  z-index 20
+  display none
+  pointer-events all
+  &-explosion
+    position absolute
+    font-size 320px
+    line-height 100%
+    text-shadow 0 0 40px #fff
+    opacity 0
+    transform scale(0)
+    animation explosions .75s linear infinite
+    &._1
+      top -160px
+      left -160px
+    &._2
+      top 160px
+      right -160px
+      animation-delay 2s
+    &._3
+      bottom -160px
+      right -20px
+      animation-delay 3.5s
+    & span
+      display block
+      animation loader 36s linear infinite 
+
+@keyframes explosions
+  0%
+    opacity 0
+    transform scale(0)
+  25%
+    opacity 1
+    transform scale(.2)
+  50%
+    opacity 1
+    transform scale(1)
+  100%
+    opacity 0
+    transform scale(1.2)
+
+
 
 // stages
 .main
@@ -424,3 +472,32 @@ section
       opacity 1
       visibility visible
       pointer-events all
+
+
+// stages 2
+.calculator__main
+  &.--shake
+    animation shaking 1s ease-in infinite
+  &.--blow-up
+    & .calculator__main-vfx
+      display block
+
+@keyframes shaking
+  0%
+    transform translate(0, 0)
+  15%
+    transform: translate(12px, 12px)
+  25%
+    transform: translate(-12px, -12px)
+  30%
+    transform: translate(12px, 52px)
+  50%
+    transform: translate(52px, 12px)
+  85%
+    transform: translate(-12px, 12px)
+  75%
+    transform: translate(-20px, 48px)
+  90%
+    transform: translate(12px, 52px)
+  100%
+    transform: translate(0, 0)
