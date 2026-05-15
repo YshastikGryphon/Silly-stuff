@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main --calculator-screen">
+    <div class="main__bg"></div>
+
+    <section class="start">
+      <div class="container">
+        <div class="start__main">
+          <button class="start__main-button">
+            Start
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <div class="intro__main">
+          <div class="intro__main-title intro__main-title-1">
+            Welcome
+          </div>
+          <div class="intro__main-title intro__main-title-2">
+            to the
+          </div>
+          <div class="intro__main-title intro__main-title-3">
+            next age
+          </div>
+          <div class="intro__main-title intro__main-title-4">
+            of <span>computer</span>
+          </div>
+          <div class="intro__main-title intro__main-title-5">
+            processing
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator">
+      <div class="container">
+        <div class="calculator__main">
+          <div class="calculator__main-window">
+            <div class="calculator__main-window-head">
+              <div class="calculator__main-window-head-display" id="display">
+                <div class="text">I'm mega GPT super calculator pwoered by poor programming!</div>
+                <div class="result">Hello!</div>
+
+                <div class="loader">
+                  <div class="loader-text"></div>
+                </div>
+              </div>
+            </div>
+            <div class="calculator__main-window-body">
+              <button class="calculator__main-window-body-btn js-btn" data-value="1">1</button>
+              <button class="calculator__main-window-body-btn js-btn" data-value="2">2</button>
+              <button class="calculator__main-window-body-btn js-btn" data-value="3">3</button>
+              <button class="calculator__main-window-body-btn js-action _action" data-value="+">+</button>
+
+              <button class="calculator__main-window-body-btn js-btn" data-value="4">4</button>
+              <button class="calculator__main-window-body-btn js-btn" data-value="5">5</button>
+              <button class="calculator__main-window-body-btn js-btn" data-value="6">6</button>
+              <button class="calculator__main-window-body-btn js-action _action" data-value="-">-</button>
+
+              <button class="calculator__main-window-body-btn js-btn" data-value="7">7</button>
+              <button class="calculator__main-window-body-btn js-btn" data-value="8">8</button>
+              <button class="calculator__main-window-body-btn js-btn" data-value="9">9</button>
+              <button class="calculator__main-window-body-btn js-action _action" data-value="×">×</button>
+
+              <button class="calculator__main-window-body-btn js-why"><span>👎</span></button>
+              <button class="calculator__main-window-body-btn js-btn" data-value="0">0</button>
+              <button class="calculator__main-window-body-btn js-what"><span>👍</span></button>
+              <button class="calculator__main-window-body-btn js-action _action" data-value="÷">÷</button>
+
+              <button class="calculator__main-window-body-btn js-backspace _action">&lt;</button>
+              <button class="calculator__main-window-body-btn _3 js-result _result">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
