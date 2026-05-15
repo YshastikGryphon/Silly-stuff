@@ -243,12 +243,27 @@ function calculator() {
       if (curOperation === '÷') {
         curOperation = null;
         console.log(`${Number(curValueB)} / ${Number(curValueA)}`)
-        let calculatedValue = Number(curValueB) / Number(curValueA);
+        let calculatedValue = Math.round(Number(curValueB) / Number(curValueA));
         curValueB = calculatedValue;
         curValueA = 0;
 
         let message, waitMessage;
         
+        if (calculatedValue === Infinity) {
+          console.log('GoodBye!');
+          calculatorMain.classList.add('--shake');
+          setTimeout(() => {
+            calculatorMain.classList.add('--blow-up');
+          }, 4000);
+          setTimeout(() => {
+            calculatorMain.setAttribute('style', 'animation-play-state: paused;')
+          }, 4800);
+          
+          messageElem.textContent = `WHAT WHAT WHAT WHAT WHAT IFINITY? WHAT WHAT WHAT`;
+          resultElem.textContent = `E4R0R`;
+          return;
+        };
+
         if (calculatedValue === Math.round(calculatedValue)) {
           // easy
           desireToWork -= 6;
@@ -308,7 +323,7 @@ function calculator() {
               break;
           };
         }
-        resultElem.textContent = `${Math.ceil(calculatedValue)}`;
+        resultElem.textContent = `${calculatedValue}`;
       };
     });
   });
