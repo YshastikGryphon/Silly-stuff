@@ -423,14 +423,14 @@ section {
 .calculator__main-vfx-explosion._2 {
   top: 160px;
   right: -160px;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
 }
 .calculator__main-vfx-explosion._3 {
   bottom: -160px;
   right: -20px;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation-delay: 0.88s;
+          animation-delay: 0.88s;
 }
 .calculator__main-vfx-explosion span {
   display: block;
