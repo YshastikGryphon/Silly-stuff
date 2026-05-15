@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=560px, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Mega Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <main class="main --start-screen">
+  <main class="main --calculator-screen">
     <div class="main__bg"></div>
 
     <section class="start">
@@ -44,57 +44,55 @@
     </section>
 
     <section class="calculator">
-      <div class="container">
-        <div class="calculator__main">
-          <div class="calculator__main-window">
-            <div class="calculator__main-window-head">
-              <div class="calculator__main-window-head-display" id="display">
-                <div class="text">I'm mega GPT super calculator pwoered by poor programming!</div>
-                <div class="result">Hello!</div>
+      <div class="calculator__main">
+        <div class="calculator__main-window">
+          <div class="calculator__main-window-head">
+            <div class="calculator__main-window-head-display" id="display">
+              <div class="text">I'm mega GPT super calculator pwoered by poor programming!</div>
+              <div class="result">Hello!</div>
 
-                <div class="loader">
-                  <div class="loader-text"></div>
-                </div>
+              <div class="loader">
+                <div class="loader-text"></div>
               </div>
-            </div>
-            <div class="calculator__main-window-body">
-              <button class="calculator__main-window-body-btn js-btn" data-value="1">1</button>
-              <button class="calculator__main-window-body-btn js-btn" data-value="2">2</button>
-              <button class="calculator__main-window-body-btn js-btn" data-value="3">3</button>
-              <button class="calculator__main-window-body-btn js-action _action" data-value="+">+</button>
-
-              <button class="calculator__main-window-body-btn js-btn" data-value="4">4</button>
-              <button class="calculator__main-window-body-btn js-btn" data-value="5">5</button>
-              <button class="calculator__main-window-body-btn js-btn" data-value="6">6</button>
-              <button class="calculator__main-window-body-btn js-action _action" data-value="-">-</button>
-
-              <button class="calculator__main-window-body-btn js-btn" data-value="7">7</button>
-              <button class="calculator__main-window-body-btn js-btn" data-value="8">8</button>
-              <button class="calculator__main-window-body-btn js-btn" data-value="9">9</button>
-              <button class="calculator__main-window-body-btn js-action _action" data-value="×">×</button>
-
-              <button class="calculator__main-window-body-btn js-why _white-filter"><span>👎</span></button>
-              <button class="calculator__main-window-body-btn js-btn" data-value="0">0</button>
-              <button class="calculator__main-window-body-btn js-what _white-filter"><span>👍</span></button>
-              <button class="calculator__main-window-body-btn js-action _action" data-value="÷">÷</button>
-
-              <button class="calculator__main-window-body-btn js-backspace _action">&lt;</button>
-              <button class="calculator__main-window-body-btn _3 js-result _result">=</button>
             </div>
           </div>
+          <div class="calculator__main-window-body">
+            <button class="calculator__main-window-body-btn js-btn" data-value="1">1</button>
+            <button class="calculator__main-window-body-btn js-btn" data-value="2">2</button>
+            <button class="calculator__main-window-body-btn js-btn" data-value="3">3</button>
+            <button class="calculator__main-window-body-btn js-action _action" data-value="+">+</button>
 
-          <div class="calculator__main-vfx">
-              <div class="calculator__main-vfx-explosion _1">
-                <span>💥</span>
-              </div>
-              <div class="calculator__main-vfx-explosion _2">
-                <span>💥</span>
-              </div>
-              <div class="calculator__main-vfx-explosion _3">
-                <span>💥</span>
-              </div>
-            </div>
+            <button class="calculator__main-window-body-btn js-btn" data-value="4">4</button>
+            <button class="calculator__main-window-body-btn js-btn" data-value="5">5</button>
+            <button class="calculator__main-window-body-btn js-btn" data-value="6">6</button>
+            <button class="calculator__main-window-body-btn js-action _action" data-value="-">-</button>
+
+            <button class="calculator__main-window-body-btn js-btn" data-value="7">7</button>
+            <button class="calculator__main-window-body-btn js-btn" data-value="8">8</button>
+            <button class="calculator__main-window-body-btn js-btn" data-value="9">9</button>
+            <button class="calculator__main-window-body-btn js-action _action" data-value="×">×</button>
+
+            <button class="calculator__main-window-body-btn js-why _white-filter"><span>👎</span></button>
+            <button class="calculator__main-window-body-btn js-btn" data-value="0">0</button>
+            <button class="calculator__main-window-body-btn js-what _white-filter"><span>👍</span></button>
+            <button class="calculator__main-window-body-btn js-action _action" data-value="÷">÷</button>
+
+            <button class="calculator__main-window-body-btn js-backspace _action">&lt;</button>
+            <button class="calculator__main-window-body-btn _3 js-result _result">=</button>
+          </div>
         </div>
+
+        <div class="calculator__main-vfx">
+            <div class="calculator__main-vfx-explosion _1">
+              <span>💥</span>
+            </div>
+            <div class="calculator__main-vfx-explosion _2">
+              <span>💥</span>
+            </div>
+            <div class="calculator__main-vfx-explosion _3">
+              <span>💥</span>
+            </div>
+          </div>
       </div>
     </section>
   </main>
