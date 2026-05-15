@@ -54,6 +54,13 @@ function calculator() {
 
   calcButtons.forEach(calcButton => {
     calcButton.addEventListener('click', function() {
+      if (curValueA.length > 12 || curValueB.length > 12) {
+        clearAll();
+        alert('I cant count such bug munbers sorry TwT');
+        resultElem.textContent = `TwT`;
+        return;
+      };
+
       if (curOperation === null) {
         curValueB = 0;
       };
@@ -92,6 +99,16 @@ function calculator() {
       };
 
       // Do I want to work?
+      if (doRng(1, 20) === 2) {
+        let userText = prompt(`Can you say that I'm a good boy?`).toLowerCase();
+        if (userText === 'good boy' || userText === 'goodboy') {
+          desireToWork += 80;
+        };
+        if (userText === 'no' || userText === 'nope') {
+          desireToWork -= 40;
+        };
+        desireToWork -= 20;
+      };
       if (desireToWork < 10) {
         artificialDelayMSG(2000, 8000, 800, `I'm so tired...`);
         let message = doRng(1, 5);
@@ -244,6 +261,7 @@ function calculator() {
         curOperation = null;
         console.log(`${Number(curValueB)} / ${Number(curValueA)}`)
         let calculatedValue = Math.round(Number(curValueB) / Number(curValueA));
+        let realCalculated = Number(curValueB) / Number(curValueA);
         curValueB = calculatedValue;
         curValueA = 0;
 
@@ -264,7 +282,7 @@ function calculator() {
           return;
         };
 
-        if (calculatedValue === Math.round(calculatedValue)) {
+        if (realCalculated === Math.round(realCalculated)) {
           // easy
           desireToWork -= 6;
           message = doRng(1, 3);
