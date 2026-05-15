@@ -12,11 +12,27 @@ html {
   --clr-2: #9929ea;
   --clr-3: #ff5fcf;
   --clr-4: #00f7ff;
+  --window-size: 372px;
+  --window-padding: 32px;
+  --window-btn-size: 80px;
+  --window-btn-spacing: 20px;
   --font-family: Arial, Helvetica, sans-serif;
   --font-base: 400 18px/24px var(--font-family);
   --font-big: 400 24px/28px var(--font-family);
   --font-bigger: 400 32px/36px var(--font-family);
   --font-hero: 600 60px/72px var(--font-family);
+}
+@media (max-width: 780px) {
+  :root {
+    --window-size: 228px;
+    --window-padding: 20px;
+    --window-btn-size: 48px;
+    --window-btn-spacing: 12px;
+    --font-base: 400 16px/22px var(--font-family);
+    --font-big: 400 22px/26px var(--font-family);
+    --font-bigger: 400 26px/28px var(--font-family);
+    --font-hero: 600 48px/52px var(--font-family);
+  }
 }
 body {
   position: relative;
@@ -186,9 +202,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  width: 440px;
-  height: 700px;
+  overflow: hidden;
+  min-width: 100dvw;
+  min-height: 100dvh;
 }
 .calculator__main::after {
   content: '';
@@ -208,8 +224,8 @@ section {
 }
 .calculator__main-window {
   position: relative;
-  width: calc(380px + 32px + 32px);
-  padding: 32px;
+  width: calc(var(--window-size) + var(--window-padding) * 2);
+  padding: var(--window-padding);
   background: #f7f8f0;
   border-radius: 32px;
   display: flex;
@@ -314,10 +330,10 @@ section {
   z-index: 2;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80px 20px 80px 20px 80px 20px 80px;
-  grid-template-columns: repeat(4, 80px);
-  grid-auto-rows: 80px;
-  gap: 20px 20px;
+  -ms-grid-columns: var(--window-btn-size) var(--window-btn-spacing) var(--window-btn-size) var(--window-btn-spacing) var(--window-btn-size) var(--window-btn-spacing) var(--window-btn-size);
+  grid-template-columns: repeat(4, var(--window-btn-size));
+  grid-auto-rows: var(--window-btn-size);
+  gap: var(--window-btn-spacing) var(--window-btn-spacing);
 }
 .calculator__main-window-body-btn {
   outline: none;
@@ -462,6 +478,11 @@ section {
 }
 .main.--calculator-screen .main__bg {
   transform: rotate(284deg);
+}
+@media (max-width: 780px) {
+  .main.--calculator-screen .main__bg {
+    display: none;
+  }
 }
 .main.--calculator-screen .start {
   display: none;
